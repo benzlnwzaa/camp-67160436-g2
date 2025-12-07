@@ -1,0 +1,161 @@
+/* 101.css - ปรับปรุงสไตล์ให้ดูอบอุ่นและทันสมัย */
+body {
+    font-family: 'Prompt', sans-serif; /* แนะนำให้ใช้ font ที่ทันสมัย เช่น Prompt */
+    background-color: #f7f7f3; /* พื้นหลังสีขาวนวล */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 30px;
+}
+
+.form-container {
+    background-color: #ffffff;
+    padding: 40px 50px;
+    border-radius: 15px; /* มุมโค้งมนมากขึ้น */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* เงาที่นุ่มนวลและลึกขึ้น */
+    width: 100%;
+    max-width: 650px;
+    border-top: 5px solid #8b8352; /* เส้นแบ่งด้านบนสีเขียวมะกอก */
+}
+
+h2 {
+    text-align: center;
+    color: #4b5320; /* สีเขียวมะกอกเข้ม */
+    font-size: 28px;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: #b8860b; /* สีทองแดง/ทอง */
+    border-radius: 2px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+    font-size: 15px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="color"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background-color: #fcfcfc;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #8b8352; /* สีเขียวมะกอกเมื่อโฟกัส */
+    box-shadow: 0 0 0 3px rgba(139, 131, 82, 0.2); /* เพิ่มเงารอบช่อง input */
+    outline: none;
+}
+
+input[type="file"] {
+    padding-top: 5px;
+    color: #555;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.radio-group, .checkbox-group {
+    padding: 5px 0;
+}
+
+.radio-group label {
+    display: inline-block;
+    font-weight: normal;
+    margin-right: 30px;
+    cursor: pointer;
+    color: #555;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 8px;
+    width: auto;
+    transform: scale(1.1);
+    accent-color: #4b5320;
+}
+
+.checkbox-group {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+    transform: scale(1.3);
+    accent-color: #4b5320;
+}
+
+.checkbox-group label {
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.button-group {
+    display: flex;
+    justify-content: flex-end; /* จัดปุ่มไปทางขวา */
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.1s;
+    min-width: 120px;
+}
+
+.reset {
+    background-color: #d2b48c; /* สีทองแดงอ่อน */
+    color: #4b5320;
+}
+
+.reset:hover {
+    background-color: #c7a77d;
+    transform: translateY(-2px);
+}
+
+.submit {
+    background-color: #4b5320; /* สีเขียวมะกอกเข้ม */
+    color: white;
+}
+
+.submit:hover {
+    background-color: #3e441a;
+    transform: translateY(-2px);
+}
