@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('html101');
+    return view('template.html101');
 });
 
 Route::get('/view2', function(){
@@ -20,3 +20,8 @@ Route::namespace('App\Http\Controllers')->group(function(){
     Route::put('/flight/{id}', 'FlightController@update_action');
     Route::delete('/flight/{id}', 'FlightController@delete_action');
 });
+
+use App\Http\Controllers\PokedexController;
+
+Route::resource('/pokedexs', PokedexController::class);
+
